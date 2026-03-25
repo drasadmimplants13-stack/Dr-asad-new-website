@@ -1,0 +1,1102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Dr. Asad Mehmood | Prosthodontist Mumbai | Dental Implants & Smile Makeovers</title>
+<meta name="description" content="Specialist Prosthodontist consulting in Mumbai. Expert in Smile Makeovers, Dental Implants, Full Mouth Rehabilitation & TMD. MDS, Saudi Licensed. Book your consultation today."/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600&family=Nunito:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<style>
+:root{
+  --brown-deep:#2c1a0e;
+  --brown:#4a2c1a;
+  --brown-mid:#7a4a2a;
+  --sienna:#b5651d;
+  --amber:#d4843a;
+  --ivory:#fdf6ed;
+  --ivory-dark:#f5ead8;
+  --ivory-warm:#ede0cc;
+  --cream:#fffaf3;
+  --text:#2e1a0a;
+  --text-mid:#6b4a2a;
+  --text-light:#9a7a5a;
+  --border:rgba(181,101,29,0.15);
+  --border-warm:rgba(181,101,29,0.3);
+  --shadow:rgba(44,26,14,0.12);
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'Nunito',sans-serif;background:var(--ivory);color:var(--text);overflow-x:hidden;cursor:none;}
+
+/* CUSTOM CURSOR */
+.cursor{position:fixed;width:10px;height:10px;background:var(--sienna);border-radius:50%;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);transition:transform 0.1s,width 0.3s,height 0.3s,background 0.3s;}
+.cursor-ring{position:fixed;width:36px;height:36px;border:1.5px solid var(--sienna);border-radius:50%;pointer-events:none;z-index:9998;transform:translate(-50%,-50%);transition:transform 0.15s ease,width 0.3s,height 0.3s,opacity 0.3s;opacity:0.5;}
+.cursor.active{width:6px;height:6px;background:var(--amber);}
+.cursor-ring.active{width:52px;height:52px;opacity:0.2;}
+
+/* GRAIN OVERLAY */
+body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");opacity:0.4;pointer-events:none;z-index:999;}
+
+/* SCROLLBAR */
+::-webkit-scrollbar{width:3px;}
+::-webkit-scrollbar-track{background:var(--ivory);}
+::-webkit-scrollbar-thumb{background:var(--sienna);}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:18px 64px;display:flex;justify-content:space-between;align-items:center;transition:all 0.4s;}
+nav.scrolled{background:rgba(253,246,237,0.96);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);box-shadow:0 4px 32px var(--shadow);}
+.nav-logo{font-family:'Playfair Display',serif;font-size:17px;font-weight:700;color:var(--brown-deep);letter-spacing:0.5px;}
+.nav-logo em{font-style:italic;color:var(--sienna);}
+.nav-links{display:flex;gap:32px;list-style:none;}
+.nav-links a{font-size:11px;font-weight:600;letter-spacing:2.5px;text-transform:uppercase;color:var(--text-mid);text-decoration:none;position:relative;transition:color 0.3s;}
+.nav-links a::after{content:'';position:absolute;bottom:-3px;left:0;width:0;height:1px;background:var(--sienna);transition:width 0.3s;}
+.nav-links a:hover{color:var(--sienna);}
+.nav-links a:hover::after{width:100%;}
+.nav-book{background:var(--sienna);color:var(--cream);font-size:10px;letter-spacing:2.5px;text-transform:uppercase;padding:11px 26px;text-decoration:none;font-weight:600;transition:all 0.3s;border:1px solid var(--sienna);}
+.nav-book:hover{background:transparent;color:var(--sienna);}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:none;padding:4px;}
+.hamburger span{width:24px;height:1.5px;background:var(--brown);transition:all 0.3s;}
+
+/* HERO */
+.hero{min-height:100vh;display:grid;grid-template-columns:1.1fr 0.9fr;position:relative;overflow:hidden;}
+.hero-left{background:var(--brown-deep);padding:140px 64px 80px;display:flex;flex-direction:column;justify-content:center;position:relative;overflow:hidden;}
+.hero-left::before{content:'';position:absolute;top:-200px;left:-200px;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(181,101,29,0.15) 0%,transparent 65%);pointer-events:none;}
+.hero-left::after{content:'';position:absolute;bottom:-100px;right:-100px;width:400px;height:400px;border-radius:50%;background:radial-gradient(circle,rgba(212,132,58,0.08) 0%,transparent 65%);pointer-events:none;}
+.hero-location{font-size:10px;letter-spacing:4px;text-transform:uppercase;color:var(--amber);font-weight:600;margin-bottom:28px;display:flex;align-items:center;gap:10px;opacity:0;animation:fadeUp 0.8s 0.2s forwards;}
+.hero-location::before{content:'';width:28px;height:1px;background:var(--amber);}
+.hero-name{font-family:'Playfair Display',serif;font-size:68px;font-weight:900;line-height:0.95;color:var(--cream);margin-bottom:6px;opacity:0;animation:fadeUp 0.8s 0.3s forwards;}
+.hero-name em{font-style:italic;color:var(--amber);display:block;}
+.hero-tagline{font-family:'Playfair Display',serif;font-size:20px;font-style:italic;color:rgba(253,246,237,0.55);margin:28px 0 20px;line-height:1.5;opacity:0;animation:fadeUp 0.8s 0.4s forwards;}
+.hero-tagline strong{color:var(--amber);font-style:normal;}
+.hero-desc{font-size:13.5px;color:rgba(253,246,237,0.6);line-height:1.85;font-weight:300;max-width:400px;opacity:0;animation:fadeUp 0.8s 0.5s forwards;}
+.hero-ctas{display:flex;gap:14px;margin-top:36px;opacity:0;animation:fadeUp 0.8s 0.6s forwards;}
+.btn-warm{background:var(--sienna);color:var(--cream);padding:14px 32px;font-size:11px;letter-spacing:2px;text-transform:uppercase;text-decoration:none;font-weight:600;transition:all 0.3s;display:inline-block;}
+.btn-warm:hover{background:var(--amber);transform:translateY(-2px);box-shadow:0 8px 24px rgba(181,101,29,0.35);}
+.btn-outline-warm{border:1px solid rgba(253,246,237,0.3);color:rgba(253,246,237,0.8);padding:14px 32px;font-size:11px;letter-spacing:2px;text-transform:uppercase;text-decoration:none;font-weight:600;transition:all 0.3s;display:inline-block;}
+.btn-outline-warm:hover{border-color:var(--amber);color:var(--amber);}
+.hero-badges{display:flex;flex-wrap:wrap;gap:8px;margin-top:28px;opacity:0;animation:fadeUp 0.8s 0.7s forwards;}
+.hero-badge{font-size:9px;letter-spacing:2.5px;text-transform:uppercase;padding:7px 14px;border:1px solid rgba(181,101,29,0.35);color:rgba(253,246,237,0.5);font-weight:600;}
+.hero-badge.lit{border-color:var(--amber);color:var(--amber);}
+
+/* HERO RIGHT — PHOTO + STATS */
+.hero-right{background:var(--ivory-dark);display:flex;flex-direction:column;position:relative;overflow:hidden;}
+.hero-right::before{content:'';position:absolute;inset:0;background:linear-gradient(160deg,var(--ivory-warm) 0%,var(--ivory-dark) 100%);opacity:0.6;}
+.photo-frame{position:relative;flex:1;display:flex;align-items:flex-end;justify-content:center;padding:40px 40px 0;z-index:1;}
+.photo-placeholder{width:100%;max-width:320px;aspect-ratio:3/4;background:linear-gradient(160deg,var(--ivory-warm),var(--ivory-dark));border:1px solid var(--border-warm);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;position:relative;overflow:hidden;}
+.photo-placeholder::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(45deg,transparent,transparent 10px,rgba(181,101,29,0.03) 10px,rgba(181,101,29,0.03) 20px);}
+.photo-icon{width:64px;height:64px;border-radius:50%;background:var(--border-warm);display:flex;align-items:center;justify-content:center;}
+.photo-icon svg{width:32px;height:32px;fill:var(--sienna);opacity:0.5;}
+.photo-label{font-size:10px;letter-spacing:2.5px;text-transform:uppercase;color:var(--text-light);font-weight:600;}
+.photo-sublabel{font-size:9px;color:var(--text-light);opacity:0.6;letter-spacing:1px;}
+.photo-corner{position:absolute;width:20px;height:20px;}
+.photo-corner.tl{top:12px;left:12px;border-top:2px solid var(--sienna);border-left:2px solid var(--sienna);}
+.photo-corner.tr{top:12px;right:12px;border-top:2px solid var(--sienna);border-right:2px solid var(--sienna);}
+.photo-corner.bl{bottom:12px;left:12px;border-bottom:2px solid var(--sienna);border-left:2px solid var(--sienna);}
+.photo-corner.br{bottom:12px;right:12px;border-bottom:2px solid var(--sienna);border-right:2px solid var(--sienna);}
+.hero-stats{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border);z-index:1;flex-shrink:0;}
+.hero-stat{background:var(--cream);padding:20px 24px;transition:background 0.3s;}
+.hero-stat:hover{background:var(--ivory-warm);}
+.stat-val{font-family:'Playfair Display',serif;font-size:28px;font-weight:700;color:var(--brown);line-height:1;}
+.stat-val em{font-size:14px;font-style:normal;color:var(--sienna);}
+.stat-key{font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--text-light);margin-top:6px;font-weight:600;}
+
+/* MARQUEE STRIP */
+.marquee-strip{background:var(--sienna);padding:14px 0;overflow:hidden;white-space:nowrap;}
+.marquee-inner{display:inline-flex;animation:marquee 22s linear infinite;}
+.marquee-item{font-size:10px;letter-spacing:3px;text-transform:uppercase;color:rgba(255,250,243,0.85);font-weight:600;padding:0 36px;}
+.marquee-item span{color:var(--ivory-dark);margin-right:36px;}
+@keyframes marquee{from{transform:translateX(0);}to{transform:translateX(-50%);}}
+
+/* SECTION BASE */
+section{padding:100px 64px;position:relative;}
+.section-eyebrow{font-size:10px;letter-spacing:4px;text-transform:uppercase;color:var(--sienna);font-weight:600;display:flex;align-items:center;gap:12px;margin-bottom:14px;}
+.section-eyebrow::before{content:'';width:28px;height:1.5px;background:var(--sienna);}
+.section-heading{font-family:'Playfair Display',serif;font-size:52px;font-weight:700;color:var(--brown-deep);line-height:1.05;margin-bottom:16px;}
+.section-heading em{font-style:italic;color:var(--sienna);}
+.warm-divider{width:48px;height:2px;background:linear-gradient(90deg,var(--sienna),var(--amber));margin:20px 0 48px;}
+
+/* RIPPLE EFFECT */
+.ripple-container{position:relative;overflow:hidden;}
+.ripple{position:absolute;border-radius:50%;background:rgba(181,101,29,0.18);transform:scale(0);animation:ripple-anim 0.7s linear;pointer-events:none;}
+@keyframes ripple-anim{to{transform:scale(4);opacity:0;}}
+
+/* ABOUT */
+.about{background:var(--cream);}
+.about-wrap{display:grid;grid-template-columns:0.85fr 1.15fr;gap:80px;align-items:start;}
+.about-photo-col{position:relative;}
+.about-photo-frame{position:relative;width:100%;aspect-ratio:3/4;background:linear-gradient(160deg,var(--ivory-warm),var(--ivory-dark));border:1px solid var(--border-warm);overflow:hidden;}
+.about-photo-frame img{width:100%;height:100%;object-fit:cover;display:block;}
+.about-photo-empty{width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;}
+.about-photo-empty svg{width:48px;height:48px;fill:var(--sienna);opacity:0.3;}
+.about-photo-empty p{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--text-light);opacity:0.6;}
+.about-accent{position:absolute;bottom:-16px;right:-16px;width:80px;height:80px;background:var(--sienna);z-index:-1;}
+.about-accent-2{position:absolute;top:-16px;left:-16px;width:48px;height:48px;border:2px solid var(--amber);z-index:-1;}
+.about-content p{font-size:14.5px;line-height:1.9;color:var(--text-mid);font-weight:300;margin-bottom:18px;}
+.about-content p strong{font-weight:600;color:var(--brown);}
+.about-highlight{background:var(--brown-deep);padding:32px 36px;margin:32px 0;}
+.about-highlight blockquote{font-family:'Playfair Display',serif;font-size:19px;font-style:italic;color:rgba(253,246,237,0.75);line-height:1.65;}
+.about-highlight cite{display:block;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--amber);margin-top:14px;font-style:normal;}
+.about-pillars{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:8px;}
+.pillar{padding:20px 22px;border:1px solid var(--border);background:var(--ivory);transition:all 0.3s;cursor:none;}
+.pillar:hover,.pillar:active{background:var(--brown-deep);border-color:var(--brown-deep);transform:translateY(-3px);box-shadow:0 12px 32px var(--shadow);}
+.pillar:hover .pillar-title,.pillar:active .pillar-title{color:var(--amber);}
+.pillar:hover .pillar-desc,.pillar:active .pillar-desc{color:rgba(253,246,237,0.55);}
+.pillar-title{font-size:12px;font-weight:600;color:var(--brown);letter-spacing:0.5px;margin-bottom:6px;transition:color 0.3s;}
+.pillar-desc{font-size:12px;color:var(--text-light);line-height:1.6;font-weight:300;transition:color 0.3s;}
+
+/* SERVICES */
+.services{background:var(--ivory-dark);}
+.services-intro{font-size:15px;line-height:1.85;color:var(--text-mid);font-weight:300;max-width:580px;margin-bottom:56px;}
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--border);}
+.service-card{background:var(--cream);padding:40px 32px;position:relative;overflow:hidden;cursor:none;transition:all 0.35s;}
+.service-card::before{content:'';position:absolute;inset:0;background:var(--brown-deep);transform:translateY(100%);transition:transform 0.4s cubic-bezier(0.4,0,0.2,1);}
+.service-card:hover::before,.service-card:active::before{transform:translateY(0);}
+.service-card:hover .svc-num,.service-card:active .svc-num{color:rgba(253,246,237,0.12);}
+.service-card:hover .svc-title,.service-card:active .svc-title{color:var(--amber);}
+.service-card:hover .svc-desc,.service-card:active .svc-desc{color:rgba(253,246,237,0.55);}
+.service-card:hover .svc-arrow,.service-card:active .svc-arrow{opacity:1;transform:translateX(0);}
+.svc-num{font-family:'Playfair Display',serif;font-size:52px;font-weight:700;color:var(--ivory-warm);line-height:1;margin-bottom:20px;position:relative;z-index:1;transition:color 0.3s;}
+.svc-title{font-family:'Playfair Display',serif;font-size:21px;font-weight:600;color:var(--brown-deep);margin-bottom:12px;line-height:1.25;position:relative;z-index:1;transition:color 0.3s;}
+.svc-desc{font-size:13px;color:var(--text-mid);line-height:1.8;font-weight:300;position:relative;z-index:1;transition:color 0.3s;}
+.svc-arrow{position:absolute;bottom:28px;right:28px;width:36px;height:36px;border:1px solid var(--amber);display:flex;align-items:center;justify-content:center;opacity:0;transform:translateX(10px);transition:all 0.35s;z-index:1;}
+.svc-arrow svg{width:14px;height:14px;stroke:var(--amber);fill:none;}
+
+/* MUMBAI FOCUS */
+.mumbai-focus{background:var(--brown-deep);padding:100px 64px;overflow:hidden;position:relative;}
+.mumbai-focus::before{content:'MUMBAI';position:absolute;right:-40px;top:50%;transform:translateY(-50%);font-family:'Playfair Display',serif;font-size:180px;font-weight:900;color:rgba(181,101,29,0.06);letter-spacing:-4px;pointer-events:none;white-space:nowrap;}
+.mumbai-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;}
+.mumbai-text .section-eyebrow{color:var(--amber);}
+.mumbai-text .section-heading{color:var(--cream);}
+.mumbai-text .section-heading em{color:var(--amber);}
+.mumbai-text p{font-size:14.5px;line-height:1.9;color:rgba(253,246,237,0.6);font-weight:300;margin-bottom:18px;}
+.mumbai-text p strong{color:var(--amber);font-weight:600;}
+.mumbai-cards{display:flex;flex-direction:column;gap:14px;}
+.mumbai-card{background:rgba(253,246,237,0.04);border:1px solid rgba(181,101,29,0.2);padding:24px 28px;display:flex;gap:20px;align-items:flex-start;transition:all 0.35s;cursor:none;}
+.mumbai-card:hover,.mumbai-card:active{background:rgba(181,101,29,0.1);border-color:var(--sienna);transform:translateX(8px);}
+.mumbai-card-icon{width:42px;height:42px;background:rgba(181,101,29,0.15);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-family:'Playfair Display',serif;font-size:18px;font-weight:700;color:var(--amber);}
+.mumbai-card-title{font-size:13px;font-weight:600;color:var(--cream);letter-spacing:0.5px;margin-bottom:5px;}
+.mumbai-card-desc{font-size:12px;color:rgba(253,246,237,0.45);line-height:1.6;font-weight:300;}
+
+/* EXPERIENCE */
+.experience{background:var(--ivory);}
+.exp-wrap{display:grid;grid-template-columns:1fr 2fr;gap:80px;}
+.exp-sidebar{position:sticky;top:120px;height:fit-content;}
+.exp-sidebar p{font-size:14px;line-height:1.85;color:var(--text-mid);font-weight:300;margin-top:16px;}
+.exp-timeline{display:flex;flex-direction:column;gap:0;}
+.exp-item{padding:40px 0 40px 40px;border-left:1px solid var(--border);position:relative;cursor:none;transition:padding-left 0.3s;}
+.exp-item::before{content:'';position:absolute;left:-5px;top:44px;width:10px;height:10px;border-radius:50%;background:var(--ivory);border:2px solid var(--border);transition:all 0.3s;}
+.exp-item:hover,.exp-item:active{padding-left:52px;}
+.exp-item:hover::before,.exp-item:active::before{background:var(--sienna);border-color:var(--sienna);box-shadow:0 0 0 4px rgba(181,101,29,0.15);}
+.exp-item:hover .exp-org,.exp-item:active .exp-org{color:var(--sienna);}
+.exp-period{font-size:10px;letter-spacing:2.5px;text-transform:uppercase;color:var(--sienna);font-weight:600;margin-bottom:8px;}
+.exp-role{font-family:'Playfair Display',serif;font-size:26px;font-weight:700;color:var(--brown-deep);margin-bottom:4px;line-height:1.2;}
+.exp-org{font-size:13px;color:var(--text-light);font-weight:400;margin-bottom:16px;transition:color 0.3s;}
+.exp-desc{font-size:13.5px;line-height:1.85;color:var(--text-mid);font-weight:300;max-width:560px;}
+
+/* EDUCATION */
+.education{background:var(--ivory-dark);}
+.edu-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+.edu-card{background:var(--cream);padding:36px 32px;border-bottom:3px solid transparent;transition:all 0.35s;cursor:none;position:relative;overflow:hidden;}
+.edu-card::after{content:'';position:absolute;inset:0;background:linear-gradient(160deg,var(--brown-deep),var(--brown));transform:translateY(100%);transition:transform 0.4s cubic-bezier(0.4,0,0.2,1);}
+.edu-card:hover::after,.edu-card:active::after{transform:translateY(0);}
+.edu-card:hover .edu-year,.edu-card:active .edu-year{color:rgba(212,132,58,0.2);}
+.edu-card:hover .edu-degree,.edu-card:active .edu-degree{color:var(--amber);}
+.edu-card:hover .edu-inst,.edu-card:active .edu-inst{color:rgba(253,246,237,0.45);}
+.edu-year{font-family:'Playfair Display',serif;font-size:52px;font-weight:700;color:var(--ivory-warm);line-height:1;margin-bottom:20px;position:relative;z-index:1;transition:color 0.3s;}
+.edu-degree{font-family:'Playfair Display',serif;font-size:19px;font-weight:600;color:var(--brown-deep);margin-bottom:10px;line-height:1.3;position:relative;z-index:1;transition:color 0.3s;}
+.edu-inst{font-size:12px;color:var(--text-light);line-height:1.6;font-weight:300;position:relative;z-index:1;transition:color 0.3s;}
+
+/* GULF SECTION */
+.gulf{background:var(--cream);border-top:1px solid var(--border);}
+.gulf-inner{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;}
+.gulf-badges{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px;}
+.gulf-badge{padding:10px 18px;border:1px solid var(--border-warm);font-size:10px;letter-spacing:2.5px;text-transform:uppercase;color:var(--sienna);font-weight:600;transition:all 0.3s;cursor:none;}
+.gulf-badge:hover,.gulf-badge:active{background:var(--sienna);color:var(--cream);transform:translateY(-2px);}
+.gulf-text p{font-size:14.5px;line-height:1.9;color:var(--text-mid);font-weight:300;margin-bottom:16px;}
+.gulf-text p strong{font-weight:600;color:var(--brown);}
+.gulf-license{background:var(--brown-deep);padding:32px 36px;display:flex;gap:20px;align-items:flex-start;margin-top:28px;}
+.gulf-license-icon{width:48px;height:48px;background:var(--sienna);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-family:'Playfair Display',serif;font-size:20px;font-weight:700;color:var(--cream);}
+.gulf-license-title{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--amber);font-weight:600;margin-bottom:6px;}
+.gulf-license-desc{font-size:13px;color:rgba(253,246,237,0.6);font-weight:300;line-height:1.6;}
+.gulf-stats{display:grid;grid-template-columns:1fr 1fr;gap:2px;background:var(--border);}
+.gulf-stat{background:var(--ivory);padding:28px 24px;text-align:center;transition:background 0.3s;cursor:none;}
+.gulf-stat:hover,.gulf-stat:active{background:var(--sienna);}
+.gulf-stat:hover .gulf-stat-val,.gulf-stat:active .gulf-stat-val{color:var(--cream);}
+.gulf-stat:hover .gulf-stat-label,.gulf-stat:active .gulf-stat-label{color:rgba(253,246,243,0.7);}
+.gulf-stat-val{font-family:'Playfair Display',serif;font-size:36px;font-weight:700;color:var(--brown);line-height:1;transition:color 0.3s;}
+.gulf-stat-label{font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--text-light);margin-top:8px;font-weight:600;transition:color 0.3s;}
+
+/* CLINICAL EXCELLENCE */
+.clinical{background:var(--ivory-dark);}
+.clinical-grid{display:grid;grid-template-columns:1fr 1fr;gap:2px;background:var(--border);}
+.clinical-card{background:var(--cream);padding:44px 40px;position:relative;overflow:hidden;cursor:none;transition:all 0.35s;}
+.clinical-card:hover,.clinical-card:active{background:var(--brown-deep);}
+.clinical-card:hover .clinical-tag,.clinical-card:active .clinical-tag{color:var(--amber);}
+.clinical-card:hover .clinical-title,.clinical-card:active .clinical-title{color:var(--cream);}
+.clinical-card:hover .clinical-desc,.clinical-card:active .clinical-desc{color:rgba(253,246,237,0.5);}
+.clinical-card:hover .clinical-soon,.clinical-card:active .clinical-soon{color:rgba(181,101,29,0.4);}
+.clinical-tag{font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--sienna);font-weight:600;margin-bottom:14px;transition:color 0.3s;}
+.clinical-title{font-family:'Playfair Display',serif;font-size:24px;font-weight:600;color:var(--brown-deep);margin-bottom:12px;line-height:1.25;transition:color 0.3s;}
+.clinical-desc{font-size:13px;color:var(--text-mid);line-height:1.8;font-weight:300;transition:color 0.3s;}
+.clinical-soon{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--ivory-warm);margin-top:20px;font-weight:600;transition:color 0.3s;}
+
+/* TESTIMONIALS */
+.testimonials{background:var(--brown-deep);padding:100px 64px;}
+.testimonials .section-eyebrow{color:var(--amber);}
+.testimonials .section-heading{color:var(--cream);}
+.testimonials .warm-divider{background:linear-gradient(90deg,var(--amber),var(--sienna));}
+.testimonial-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+.testimonial-card{background:rgba(253,246,237,0.04);border:1px solid rgba(181,101,29,0.15);padding:32px 28px;transition:all 0.35s;cursor:none;}
+.testimonial-card:hover,.testimonial-card:active{background:rgba(181,101,29,0.1);border-color:var(--sienna);transform:translateY(-4px);}
+.t-quote{font-family:'Playfair Display',serif;font-size:36px;color:var(--sienna);opacity:0.4;line-height:1;margin-bottom:12px;}
+.t-text{font-size:13px;color:rgba(253,246,237,0.55);line-height:1.8;font-weight:300;font-style:italic;}
+.t-name{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--amber);font-weight:600;margin-top:20px;}
+.t-soon{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:rgba(181,101,29,0.25);margin-top:12px;}
+
+/* CONTACT */
+.contact{background:var(--ivory);}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;}
+.contact-left p{font-size:14.5px;line-height:1.9;color:var(--text-mid);font-weight:300;margin-bottom:32px;}
+.contact-details{display:flex;flex-direction:column;gap:12px;}
+.contact-item{display:flex;align-items:center;gap:16px;padding:16px 20px;border:1px solid var(--border);background:var(--cream);transition:all 0.3s;cursor:none;}
+.contact-item:hover,.contact-item:active{border-color:var(--sienna);background:var(--ivory-warm);transform:translateX(6px);}
+.c-icon{width:38px;height:38px;background:var(--sienna);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.c-icon svg{width:16px;height:16px;stroke:var(--cream);fill:none;stroke-width:2;}
+.c-label{font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--text-light);font-weight:600;}
+.c-val{font-size:13px;color:var(--brown);font-weight:400;margin-top:2px;}
+.contact-form{display:flex;flex-direction:column;gap:14px;}
+.f-group{display:flex;flex-direction:column;gap:6px;}
+.f-label{font-size:9px;letter-spacing:2.5px;text-transform:uppercase;color:var(--text-light);font-weight:600;}
+.f-input{padding:14px 16px;border:1px solid var(--border);background:var(--cream);font-size:13px;font-family:'Nunito',sans-serif;color:var(--text);outline:none;transition:all 0.3s;}
+.f-input:focus{border-color:var(--sienna);background:var(--ivory-warm);}
+.f-textarea{resize:vertical;min-height:110px;}
+.f-submit{background:var(--sienna);color:var(--cream);padding:16px 36px;font-size:11px;letter-spacing:2.5px;text-transform:uppercase;border:none;cursor:none;font-family:'Nunito',sans-serif;font-weight:600;transition:all 0.3s;align-self:flex-start;}
+.f-submit:hover{background:var(--brown-deep);transform:translateY(-2px);box-shadow:0 8px 24px var(--shadow);}
+
+/* FOOTER */
+footer{background:var(--brown-deep);padding:52px 64px;display:flex;justify-content:space-between;align-items:center;border-top:1px solid rgba(181,101,29,0.2);}
+.footer-logo{font-family:'Playfair Display',serif;font-size:19px;font-weight:700;color:var(--cream);}
+.footer-logo em{font-style:italic;color:var(--amber);}
+.footer-copy{font-size:11px;color:rgba(253,246,237,0.3);letter-spacing:0.5px;}
+.footer-nav{display:flex;gap:28px;}
+.footer-nav a{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:rgba(253,246,237,0.35);text-decoration:none;transition:color 0.3s;}
+.footer-nav a:hover{color:var(--amber);}
+
+/* SCROLL REVEAL */
+.reveal{opacity:0;transform:translateY(28px);transition:opacity 0.7s ease,transform 0.7s ease;}
+.reveal.visible{opacity:1;transform:translateY(0);}
+.reveal-left{opacity:0;transform:translateX(-28px);transition:opacity 0.7s ease,transform 0.7s ease;}
+.reveal-left.visible{opacity:1;transform:translateX(0);}
+.reveal-right{opacity:0;transform:translateX(28px);transition:opacity 0.7s ease,transform 0.7s ease;}
+.reveal-right.visible{opacity:1;transform:translateX(0);}
+.delay-1{transition-delay:0.1s;}
+.delay-2{transition-delay:0.2s;}
+.delay-3{transition-delay:0.3s;}
+.delay-4{transition-delay:0.4s;}
+.delay-5{transition-delay:0.5s;}
+
+/* ANIMATIONS */
+@keyframes fadeUp{from{opacity:0;transform:translateY(28px);}to{opacity:1;transform:translateY(0);}}
+
+/* MOBILE NAV */
+.mobile-menu{display:none;position:fixed;inset:0;background:var(--brown-deep);z-index:190;flex-direction:column;align-items:center;justify-content:center;gap:32px;}
+.mobile-menu.open{display:flex;}
+.mobile-menu a{font-family:'Playfair Display',serif;font-size:32px;font-weight:600;color:var(--cream);text-decoration:none;transition:color 0.3s;}
+.mobile-menu a:hover{color:var(--amber);}
+.menu-close{position:absolute;top:24px;right:24px;background:none;border:none;cursor:none;font-size:28px;color:var(--cream);}
+
+/* RESPONSIVE */
+@media(max-width:960px){
+  nav{padding:16px 24px;}
+  .nav-links,.nav-book{display:none;}
+  .hamburger{display:flex;}
+  .hero{grid-template-columns:1fr;}
+  .hero-left{padding:100px 24px 60px;}
+  .hero-name{font-size:48px;}
+  .hero-right{min-height:420px;}
+  section{padding:72px 24px;}
+  .about-wrap,.mumbai-grid,.gulf-inner,.contact-grid,.exp-wrap{grid-template-columns:1fr;}
+  .services-grid,.clinical-grid{grid-template-columns:1fr;}
+  .testimonial-grid,.edu-grid{grid-template-columns:1fr;}
+  .gulf-stats{grid-template-columns:1fr 1fr;}
+  footer{flex-direction:column;gap:20px;text-align:center;padding:36px 24px;}
+  .exp-sidebar{position:static;}
+  .mumbai-focus::before{font-size:80px;}
+  body{cursor:auto;}
+  .cursor,.cursor-ring{display:none;}
+}
+</style>
+</head>
+<body>
+
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <button class="menu-close" id="menuClose">✕</button>
+  <a href="#about" onclick="closeMobile()">About</a>
+  <a href="#services" onclick="closeMobile()">Services</a>
+  <a href="#mumbai" onclick="closeMobile()">Mumbai</a>
+  <a href="#experience" onclick="closeMobile()">Experience</a>
+  <a href="#gulf" onclick="closeMobile()">Gulf</a>
+  <a href="#contact" onclick="closeMobile()">Contact</a>
+</div>
+
+<!-- NAV -->
+<nav id="navbar">
+  <div class="nav-logo">Dr. <em>Asad</em> Mehmood</div>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#mumbai">Mumbai</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#education">Education</a></li>
+    <li><a href="#gulf">Gulf</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a href="#contact" class="nav-book">Book Consultation</a>
+  <div class="hamburger" id="hamburger">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-left">
+    <div class="hero-location">Consulting in Mumbai, India</div>
+    <h1 class="hero-name">Dr. Asad<em>Mehmood</em></h1>
+    <p class="hero-tagline">Crafting Smiles.<br/><strong>Creating Confidence.</strong></p>
+    <p class="hero-desc">Specialist Prosthodontist & Implantologist offering expert consultation in Mumbai. MDS qualified, Saudi licensed, with international Gulf clinical experience.</p>
+    <div class="hero-ctas">
+      <a href="#contact" class="btn-warm">Book Consultation</a>
+      <a href="#services" class="btn-outline-warm">Our Services</a>
+    </div>
+    <div class="hero-badges">
+      <span class="hero-badge lit">MDS Prosthodontics</span>
+      <span class="hero-badge lit">Saudi Licensed</span>
+      <span class="hero-badge">Mumbai Consulting</span>
+      <span class="hero-badge">Gulf Practice Ready</span>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="photo-frame">
+      <div class="photo-placeholder">
+        <div class="photo-corner tl"></div>
+        <div class="photo-corner tr"></div>
+        <div class="photo-corner bl"></div>
+        <div class="photo-corner br"></div>
+        <img src="/images/profile.jpg" alt="Dr. Asad Mehmood" style="width:100%;height:100%;object-fit:cover;object-position:top;display:block;" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
+        <div class="photo-icon" style="display:none;flex-direction:column;align-items:center;gap:12px;position:absolute;">
+          <svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          <div class="photo-label">Profile Photograph</div>
+          <div class="photo-sublabel">Upload profile.jpg to images folder</div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-stats">
+      <div class="hero-stat">
+        <div class="stat-val">MDS<em> 2020</em></div>
+        <div class="stat-key">Masters · Prosthodontics</div>
+      </div>
+      <div class="hero-stat">
+        <div class="stat-val">KSA<em> lic</em></div>
+        <div class="stat-key">Saudi Licensed</div>
+      </div>
+      <div class="hero-stat">
+        <div class="stat-val">5<em>+ yrs</em></div>
+        <div class="stat-key">Clinical Experience</div>
+      </div>
+      <div class="hero-stat">
+        <div class="stat-val">Gulf<em> ready</em></div>
+        <div class="stat-key">International Practice</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee-strip">
+  <div class="marquee-inner">
+    <span class="marquee-item">Smile Makeovers <span>·</span></span>
+    <span class="marquee-item">Dental Implants <span>·</span></span>
+    <span class="marquee-item">Full Mouth Rehabilitation <span>·</span></span>
+    <span class="marquee-item">TMD Management <span>·</span></span>
+    <span class="marquee-item">Cast Partial Dentures <span>·</span></span>
+    <span class="marquee-item">Digital Smile Design <span>·</span></span>
+    <span class="marquee-item">MDS Prosthodontist <span>·</span></span>
+    <span class="marquee-item">Mumbai Consulting <span>·</span></span>
+    <span class="marquee-item">Saudi Licensed <span>·</span></span>
+    <span class="marquee-item">Smile Makeovers <span>·</span></span>
+    <span class="marquee-item">Dental Implants <span>·</span></span>
+    <span class="marquee-item">Full Mouth Rehabilitation <span>·</span></span>
+    <span class="marquee-item">TMD Management <span>·</span></span>
+    <span class="marquee-item">Cast Partial Dentures <span>·</span></span>
+    <span class="marquee-item">Digital Smile Design <span>·</span></span>
+    <span class="marquee-item">MDS Prosthodontist <span>·</span></span>
+    <span class="marquee-item">Mumbai Consulting <span>·</span></span>
+    <span class="marquee-item">Saudi Licensed <span>·</span></span>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="about-wrap">
+    <div class="about-photo-col reveal-left">
+      <div class="about-photo-frame">
+        <img src="/images/profile.jpg" alt="Dr. Asad Mehmood" style="width:100%;height:100%;object-fit:cover;object-position:top;display:block;" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
+        <div class="about-photo-empty" style="display:none;">
+          <svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          <p>Upload profile.jpg to images folder</p>
+        </div>
+      </div>
+      <div class="about-accent"></div>
+      <div class="about-accent-2"></div>
+    </div>
+    <div class="about-content reveal-right">
+      <div class="section-eyebrow">About</div>
+      <h2 class="section-heading">Specialist Care.<br/><em>Exceptional Results.</em></h2>
+      <div class="warm-divider"></div>
+      <p>I am a specialist Prosthodontist and Implantologist currently consulting in <strong>Mumbai</strong>, with a passion for transforming lives through confident, beautiful smiles. My practice is built around the most complex and rewarding cases in dentistry.</p>
+      <p>I completed my <strong>Masters in Prosthodontics in 2020</strong> from Rajiv Gandhi University of Health Sciences, Bengaluru, and hold an <strong>international Prosthodontic license from Saudi Arabia</strong>, with hands-on clinical experience at Al-Flaiw Medical Polyclinic, Saudi Arabia.</p>
+      <div class="about-highlight">
+        <blockquote>"Crafting Smiles. Creating Confidence. One patient at a time."</blockquote>
+        <cite>— Dr. Asad Mehmood · Clinical Philosophy</cite>
+      </div>
+      <div class="about-pillars">
+        <div class="pillar ripple-container reveal delay-1">
+          <div class="pillar-title">Minimally Invasive</div>
+          <div class="pillar-desc">Preserving natural tooth structure. Maximum results, minimum intervention.</div>
+        </div>
+        <div class="pillar ripple-container reveal delay-2">
+          <div class="pillar-title">Esthetics First</div>
+          <div class="pillar-desc">Every restoration designed for natural, harmonious beauty.</div>
+        </div>
+        <div class="pillar ripple-container reveal delay-3">
+          <div class="pillar-title">Innovation Driven</div>
+          <div class="pillar-desc">Latest patented techniques in implantology and digital dentistry.</div>
+        </div>
+        <div class="pillar ripple-container reveal delay-4">
+          <div class="pillar-title">Patient Centred</div>
+          <div class="pillar-desc">Every treatment plan built around the individual patient's needs.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div class="section-eyebrow reveal">Areas of Expertise</div>
+  <h2 class="section-heading reveal delay-1">Specialist<br/><em>Services</em></h2>
+  <div class="warm-divider reveal delay-2"></div>
+  <p class="services-intro reveal delay-3">Comprehensive Prosthodontic care delivered with precision and artistry. Each treatment is designed around your unique clinical needs and aesthetic goals.</p>
+  <div class="services-grid">
+    <div class="service-card ripple-container reveal delay-1">
+      <img src="/images/smile-makeover.jpg" alt="Esthetic Smile Makeover" style="width:100%;height:180px;object-fit:cover;margin-bottom:20px;display:block;" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
+      <div class="svc-photo-placeholder" style="display:none;">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+        <span>Upload smile-makeover.jpg</span>
+      </div>
+      <div class="svc-num">01</div>
+      <div class="svc-title">Esthetic Smile Makeovers</div>
+      <div class="svc-desc">Complete smile transformation combining art and science. Color, shape, alignment and harmony using the latest esthetic techniques.</div>
+      <div class="svc-arrow"><svg viewBox="0 0 24 24" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+    </div>
+    <div class="service-card ripple-container reveal delay-2">
+      <img src="/images/full-mouth-rehab.jpg" alt="Full Mouth Rehabilitation" style="width:100%;height:180px;object-fit:cover;margin-bottom:20px;display:block;" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
+      <div class="svc-photo-placeholder" style="display:none;">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+        <span>Upload full-mouth-rehab.jpg</span>
+      </div>
+      <div class="svc-num">02</div>
+      <div class="svc-title">Full Mouth Rehabilitation</div>
+      <div class="svc-desc">Complete restorative approach addressing teeth, gums, bite and jaw function. Ideal for extensive wear, multiple missing teeth or failing restorations.</div>
+      <div class="svc-arrow"><svg viewBox="0 0 24 24" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+    </div>
+    <div class="service-card ripple-container reveal delay-3">
+      <img src="/images/dental-implants.jpg" alt="Dental Implants" style="width:100%;height:180px;object-fit:cover;margin-bottom:20px;display:block;" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
+      <div class="svc-photo-placeholder" style="display:none;">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+        <span>Upload dental-implants.jpg</span>
+      </div>
+      <div class="svc-num">03</div>
+      <div class="svc-title">Dental Implants</div>
+      <div class="svc-desc">Permanent tooth replacement using the latest patented implant techniques. Single implants, multiple implants and implant-supported prostheses.</div>
+      <div class="svc-arrow"><svg viewBox="0 0 24 24" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+    </div>
+    <div class="service-card ripple-container reveal delay-1">
+      <img src="/images/partial-denture.jpg" alt="Cast Partial Dentures" style="width:100%;height:180px;object-fit:cover;margin-bottom:20px;display:block;" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
+      <div class="svc-photo-placeholder" style="display:none;">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+        <span>Upload partial-denture.jpg</span>
+      </div>
+      <div class="svc-num">04</div>
+      <div class="svc-title">Cast Partial Dentures</div>
+      <div class="svc-desc">Precision-fabricated removable partial dentures providing functional and esthetic tooth replacement for patients with multiple missing teeth.</div>
+      <div class="svc-arrow"><svg viewBox="0 0 24 24" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+    </div>
+    <div class="service-card ripple-container reveal delay-2">
+      <img src="/images/tmd.jpg" alt="TMD Treatment" style="width:100%;height:180px;object-fit:cover;margin-bottom:20px;display:block;" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
+      <div class="svc-photo-placeholder" style="display:none;">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+        <span>Upload tmd.jpg</span>
+      </div>
+      <div class="svc-num">05</div>
+      <div class="svc-title">Temporomandibular Disorders</div>
+      <div class="svc-desc">Diagnosis and management of jaw joint disorders including chronic jaw pain, clicking, limited mouth opening and bite-related discomfort.</div>
+      <div class="svc-arrow"><svg viewBox="0 0 24 24" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+    </div>
+    <div class="service-card ripple-container reveal delay-3">
+      <img src="/images/digital-smile.jpg" alt="Digital Smile Design" style="width:100%;height:180px;object-fit:cover;margin-bottom:20px;display:block;" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
+      <div class="svc-photo-placeholder" style="display:none;">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+        <span>Upload digital-smile.jpg</span>
+      </div>
+      <div class="svc-num">06</div>
+      <div class="svc-title">Digital Smile Design</div>
+      <div class="svc-desc">Advanced digital planning allowing patients to visualise proposed outcomes before treatment begins. Precision, predictability and patient confidence.</div>
+      <div class="svc-arrow"><svg viewBox="0 0 24 24" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+    </div>
+  </div>
+
+  <style>
+  .svc-photo-placeholder{width:100%;height:180px;background:linear-gradient(160deg,var(--ivory-warm),var(--ivory-dark));border:1px dashed var(--border-warm);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;margin-bottom:20px;position:relative;z-index:1;transition:background 0.3s;overflow:hidden;}
+  .svc-photo-placeholder svg{width:32px;height:32px;color:var(--sienna);opacity:0.3;transition:opacity 0.3s;}
+  .svc-photo-placeholder span{font-size:9px;letter-spacing:2.5px;text-transform:uppercase;color:var(--text-light);font-weight:600;opacity:0.5;transition:opacity 0.3s;}
+  .service-card:hover .svc-photo-placeholder,.service-card:active .svc-photo-placeholder{background:rgba(253,246,237,0.06);border-color:rgba(181,101,29,0.2);}
+  .service-card:hover .svc-photo-placeholder svg,.service-card:active .svc-photo-placeholder svg{opacity:0.15;}
+  .service-card:hover .svc-photo-placeholder span,.service-card:active .svc-photo-placeholder span{opacity:0.25;}
+  </style>
+</section>
+
+<!-- MUMBAI FOCUS -->
+<section class="mumbai-focus" id="mumbai">
+  <div class="mumbai-grid">
+    <div class="mumbai-text">
+      <div class="section-eyebrow">Currently Consulting</div>
+      <h2 class="section-heading">Specialist Care<br/><em>in Mumbai</em></h2>
+      <div class="warm-divider"></div>
+      <p>Based in <strong>Mumbai</strong>, I offer specialist Prosthodontic consultations for patients seeking expert care in smile makeovers, dental implants, full mouth rehabilitation and TMD management.</p>
+      <p>Whether you are looking to transform your smile, restore function after tooth loss, or address chronic jaw discomfort — I bring the expertise of a <strong>postgraduate specialist</strong> to every consultation.</p>
+      <a href="#contact" class="btn-warm" style="margin-top:12px;display:inline-block;">Schedule a Consultation</a>
+    </div>
+    <div class="mumbai-cards">
+      <div class="mumbai-card ripple-container reveal delay-1">
+        <div class="mumbai-card-icon">01</div>
+        <div>
+          <div class="mumbai-card-title">Specialist Consultation</div>
+          <div class="mumbai-card-desc">Comprehensive assessment by a qualified MDS Prosthodontist. Thorough diagnosis before any treatment planning.</div>
+        </div>
+      </div>
+      <div class="mumbai-card ripple-container reveal delay-2">
+        <div class="mumbai-card-icon">02</div>
+        <div>
+          <div class="mumbai-card-title">Advanced Treatment Planning</div>
+          <div class="mumbai-card-desc">Digital smile design and diagnostic wax-ups. You see your outcome before treatment begins.</div>
+        </div>
+      </div>
+      <div class="mumbai-card ripple-container reveal delay-3">
+        <div class="mumbai-card-icon">03</div>
+        <div>
+          <div class="mumbai-card-title">Complex Case Management</div>
+          <div class="mumbai-card-desc">Full mouth rehabilitation, implant prosthetics and TMD management handled with specialist precision.</div>
+        </div>
+      </div>
+      <div class="mumbai-card ripple-container reveal delay-4">
+        <div class="mumbai-card-icon">04</div>
+        <div>
+          <div class="mumbai-card-title">Minimally Invasive Approach</div>
+          <div class="mumbai-card-desc">Maximum aesthetic improvement with minimum intervention. Natural tooth structure preserved wherever possible.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section class="experience" id="experience">
+  <div class="exp-wrap">
+    <div class="exp-sidebar reveal-left">
+      <div class="section-eyebrow">Experience</div>
+      <h2 class="section-heading">A Professional<br/><em>Journey</em></h2>
+      <div class="warm-divider"></div>
+      <p>A clinical career defined by deliberate progression from foundational general practice to the highest levels of specialist Prosthodontic care.</p>
+    </div>
+    <div class="exp-timeline">
+      <div class="exp-item ripple-container reveal delay-1">
+        <div class="exp-period">Current · Mumbai, India</div>
+        <div class="exp-role">Consulting Prosthodontist</div>
+        <div class="exp-org">Private Consultation · Mumbai</div>
+        <div class="exp-desc">Currently delivering specialist Prosthodontic consultation in Mumbai, managing complex restorative and implant cases.</div>
+      </div>
+      <div class="exp-item ripple-container reveal delay-2">
+        <div class="exp-period">Saudi Arabia · 6 Months</div>
+        <div class="exp-role">Prosthodontist</div>
+        <div class="exp-org">Al-Flaiw Medical Polyclinic · Saudi Arabia</div>
+        <div class="exp-desc">Delivered specialist Prosthodontic care within a demanding Gulf clinical environment. Successfully rehabilitated patients with dental implants across both esthetic and posterior zones, and designed complete smile makeovers delivering natural, transformative results.</div>
+      </div>
+      <div class="exp-item ripple-container reveal delay-3">
+        <div class="exp-period">Maharashtra, India</div>
+        <div class="exp-role">Foundation Clinical Years</div>
+        <div class="exp-org">Private Practice · Maharashtra</div>
+        <div class="exp-desc">Early clinical years across private practice in Maharashtra establishing a strong foundation in patient management, general dentistry, and the diagnostic skills that underpin exceptional specialist practice.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EDUCATION -->
+<section class="education" id="education">
+  <div class="section-eyebrow reveal">Education & Credentials</div>
+  <h2 class="section-heading reveal delay-1">Academic<br/><em>Foundation</em></h2>
+  <div class="warm-divider reveal delay-2"></div>
+  <div class="edu-grid">
+    <div class="edu-card ripple-container reveal delay-1">
+      <div class="edu-degree">MDS Prosthodontics · RGUHS</div>
+    </div>
+    <div class="edu-card ripple-container reveal delay-2">
+      <div class="edu-degree">International Prosthodontic License · Saudi Arabia</div>
+    </div>
+    <div class="edu-card ripple-container reveal delay-3">
+      <div class="edu-degree">BDS · MUHS</div>
+    </div>
+  </div>
+</section>
+
+<!-- GULF -->
+<section class="gulf" id="gulf">
+  <div class="gulf-inner">
+    <div class="gulf-text reveal-left">
+      <div class="section-eyebrow">Gulf Opportunities</div>
+      <h2 class="section-heading">Gulf<br/><em>Experience</em></h2>
+      <div class="warm-divider"></div>
+      <p>Holding an <strong>international Prosthodontic license from Saudi Arabia</strong> and six months of direct clinical experience in the Kingdom, I am Gulf-ready from day one.</p>
+      <p>Holding an <strong>international Prosthodontic license from Saudi Arabia</strong> and six months of direct clinical experience in the Kingdom, I bring Gulf-standard specialist care to every patient.</p>
+      <div class="gulf-license">
+        <div class="gulf-license-icon">KSA</div>
+        <div>
+          <div class="gulf-license-title">International Prosthodontic License · Saudi Arabia</div>
+          <div class="gulf-license-desc">Licensed for specialist practice in the Kingdom of Saudi Arabia. Clinical experience at Al-Flaiw Medical Polyclinic, Saudi Arabia.</div>
+        </div>
+      </div>
+      <div class="gulf-badges">
+        <span class="gulf-badge">Saudi Arabia</span>
+        <span class="gulf-badge">UAE</span>
+        <span class="gulf-badge">Qatar</span>
+        <span class="gulf-badge">Specialist Clinics</span>
+        <span class="gulf-badge">Hospitals</span>
+        <span class="gulf-badge">Academic Roles</span>
+        <span class="gulf-badge">Implant Industry</span>
+      </div>
+    </div>
+    <div class="reveal-right">
+      <div class="gulf-stats">
+        <div class="gulf-stat ripple-container">
+          <div class="gulf-stat-val">KSA</div>
+          <div class="gulf-stat-label">Licensed</div>
+        </div>
+        <div class="gulf-stat ripple-container">
+          <div class="gulf-stat-val">6mo</div>
+          <div class="gulf-stat-label">Gulf Experience</div>
+        </div>
+        <div class="gulf-stat ripple-container">
+          <div class="gulf-stat-val">3</div>
+          <div class="gulf-stat-label">Target Markets</div>
+        </div>
+        <div class="gulf-stat ripple-container">
+          <div class="gulf-stat-val">MDS</div>
+          <div class="gulf-stat-label">Specialist Degree</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LIFECHANGING OUTCOMES -->
+<section class="clinical" id="clinical">
+  <div class="section-eyebrow reveal">Clinical Excellence</div>
+  <h2 class="section-heading reveal delay-1">Lifechanging<br/><em>Outcomes</em></h2>
+  <div class="warm-divider reveal delay-2"></div>
+  <p class="services-intro reveal delay-3">Every smile tells a story. Swipe through to see real patient transformations. Before and after photographs will be added as cases are documented with patient consent.</p>
+
+  <!-- BEFORE & AFTER SLIDER -->
+  <div class="slider-wrap reveal delay-4">
+    <div class="slider-track" id="sliderTrack">
+
+      <!-- SLIDE 1 -->
+      <div class="slide">
+        <div class="ba-container">
+          <div class="ba-panel">
+            <div class="ba-photo-placeholder">
+              <img src="/images/case1-before.jpg" alt="Case 1 Before" style="width:100%;height:100%;object-fit:cover;display:block;" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
+              <div class="ba-photo-inner" style="display:none;">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+                <span>Upload case1-before.jpg</span>
+              </div>
+            </div>
+            <div class="ba-label before-label">Before</div>
+          </div>
+          <div class="ba-divider">
+            <div class="ba-divider-line"></div>
+            <div class="ba-divider-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 3L3 8l5 5M16 3l5 5-5 5"/></svg>
+            </div>
+          </div>
+          <div class="ba-panel">
+            <div class="ba-photo-placeholder after">
+              <img src="/images/case1-after.jpg" alt="Case 1 After" style="width:100%;height:100%;object-fit:cover;display:block;" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
+              <div class="ba-photo-inner" style="display:none;">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+                <span>Upload case1-after.jpg</span>
+              </div>
+            </div>
+            <div class="ba-label after-label">After</div>
+          </div>
+        </div>
+        <div class="slide-caption">Case 1 · Replace with your case title and brief description</div>
+      </div>
+
+      <!-- SLIDE 2 -->
+      <div class="slide">
+        <div class="ba-container">
+          <div class="ba-panel">
+            <div class="ba-photo-placeholder">
+              <img src="/images/case2-before.jpg" alt="Case 2 Before" style="width:100%;height:100%;object-fit:cover;display:block;" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
+              <div class="ba-photo-inner" style="display:none;">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+                <span>Upload case2-before.jpg</span>
+              </div>
+            </div>
+            <div class="ba-label before-label">Before</div>
+          </div>
+          <div class="ba-divider">
+            <div class="ba-divider-line"></div>
+            <div class="ba-divider-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 3L3 8l5 5M16 3l5 5-5 5"/></svg>
+            </div>
+          </div>
+          <div class="ba-panel">
+            <div class="ba-photo-placeholder after">
+              <img src="/images/case2-after.jpg" alt="Case 2 After" style="width:100%;height:100%;object-fit:cover;display:block;" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
+              <div class="ba-photo-inner" style="display:none;">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+                <span>Upload case2-after.jpg</span>
+              </div>
+            </div>
+            <div class="ba-label after-label">After</div>
+          </div>
+        </div>
+        <div class="slide-caption">Case 2 · Replace with your case title and brief description</div>
+      </div>
+
+      <!-- SLIDE 3 -->
+      <div class="slide">
+        <div class="ba-container">
+          <div class="ba-panel">
+            <div class="ba-photo-placeholder">
+              <img src="/images/case3-before.jpg" alt="Case 3 Before" style="width:100%;height:100%;object-fit:cover;display:block;" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
+              <div class="ba-photo-inner" style="display:none;">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+                <span>Upload case3-before.jpg</span>
+              </div>
+            </div>
+            <div class="ba-label before-label">Before</div>
+          </div>
+          <div class="ba-divider">
+            <div class="ba-divider-line"></div>
+            <div class="ba-divider-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 3L3 8l5 5M16 3l5 5-5 5"/></svg>
+            </div>
+          </div>
+          <div class="ba-panel">
+            <div class="ba-photo-placeholder after">
+              <img src="/images/case3-after.jpg" alt="Case 3 After" style="width:100%;height:100%;object-fit:cover;display:block;" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
+              <div class="ba-photo-inner" style="display:none;">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+                <span>Upload case3-after.jpg</span>
+              </div>
+            </div>
+            <div class="ba-label after-label">After</div>
+          </div>
+        </div>
+        <div class="slide-caption">Case 3 · Replace with your case title and brief description</div>
+      </div>
+
+      <!-- SLIDE 4 -->
+      <div class="slide">
+        <div class="ba-container">
+          <div class="ba-panel">
+            <div class="ba-photo-placeholder">
+              <img src="/images/case4-before.jpg" alt="Case 4 Before" style="width:100%;height:100%;object-fit:cover;display:block;" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
+              <div class="ba-photo-inner" style="display:none;">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+                <span>Upload case4-before.jpg</span>
+              </div>
+            </div>
+            <div class="ba-label before-label">Before</div>
+          </div>
+          <div class="ba-divider">
+            <div class="ba-divider-line"></div>
+            <div class="ba-divider-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 3L3 8l5 5M16 3l5 5-5 5"/></svg>
+            </div>
+          </div>
+          <div class="ba-panel">
+            <div class="ba-photo-placeholder after">
+              <img src="/images/case4-after.jpg" alt="Case 4 After" style="width:100%;height:100%;object-fit:cover;display:block;" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
+              <div class="ba-photo-inner" style="display:none;">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+                <span>Upload case4-after.jpg</span>
+              </div>
+            </div>
+            <div class="ba-label after-label">After</div>
+          </div>
+        </div>
+        <div class="slide-caption">Case 4 · Replace with your case title and brief description</div>
+      </div>
+
+    </div>
+
+    <!-- SLIDER CONTROLS -->
+    <div class="slider-controls">
+      <button class="slider-btn" id="prevBtn" onclick="moveSlide(-1)">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+      </button>
+      <div class="slider-dots" id="sliderDots"></div>
+      <button class="slider-btn" id="nextBtn" onclick="moveSlide(1)">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- CONSENT NOTE -->
+  <p class="consent-note reveal">All clinical photographs are shared with explicit patient consent. Images will be added progressively as cases are documented.</p>
+</section>
+
+<style>
+.slider-wrap{position:relative;overflow:hidden;margin-top:8px;}
+.slider-track{display:flex;transition:transform 0.5s cubic-bezier(0.4,0,0.2,1);}
+.slide{min-width:100%;padding:0 4px;}
+.ba-container{display:grid;grid-template-columns:1fr auto 1fr;gap:0;align-items:stretch;height:440px;}
+.ba-panel{position:relative;overflow:hidden;}
+.ba-photo-placeholder{width:100%;height:100%;background:linear-gradient(160deg,var(--ivory-warm),var(--ivory-dark));display:flex;align-items:center;justify-content:center;border:1px solid var(--border);}
+.ba-photo-placeholder.after{background:linear-gradient(160deg,rgba(181,101,29,0.08),var(--ivory-warm));}
+.ba-photo-inner{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;text-align:center;padding:24px;}
+.ba-photo-inner svg{width:48px;height:48px;color:var(--sienna);opacity:0.3;}
+.ba-photo-inner span{font-size:11px;letter-spacing:2.5px;text-transform:uppercase;color:var(--text-light);font-weight:600;}
+.ba-photo-inner small{font-size:10px;color:var(--text-light);opacity:0.5;}
+.ba-label{position:absolute;top:16px;left:16px;font-size:9px;letter-spacing:2.5px;text-transform:uppercase;font-weight:600;padding:6px 14px;border:1px solid;}
+.before-label{color:var(--text-light);border-color:var(--border);}
+.after-label{color:var(--sienna);border-color:var(--sienna);background:rgba(181,101,29,0.06);}
+.ba-divider{width:48px;display:flex;flex-direction:column;align-items:center;justify-content:center;position:relative;background:var(--ivory);}
+.ba-divider-line{position:absolute;top:0;bottom:0;width:1px;background:var(--border-warm);}
+.ba-divider-icon{width:36px;height:36px;background:var(--sienna);display:flex;align-items:center;justify-content:center;z-index:1;border-radius:50%;}
+.ba-divider-icon svg{width:16px;height:16px;color:var(--cream);}
+.slide-caption{text-align:center;padding:20px 24px;font-family:'Playfair Display',serif;font-size:15px;font-style:italic;color:var(--text-mid);background:var(--cream);border:1px solid var(--border);border-top:none;}
+.slider-controls{display:flex;align-items:center;justify-content:center;gap:24px;margin-top:28px;}
+.slider-btn{width:48px;height:48px;border:1px solid var(--border-warm);background:var(--cream);display:flex;align-items:center;justify-content:center;cursor:none;transition:all 0.3s;}
+.slider-btn:hover{background:var(--sienna);border-color:var(--sienna);}
+.slider-btn:hover svg{stroke:var(--cream);}
+.slider-btn svg{width:18px;height:18px;stroke:var(--sienna);}
+.slider-dots{display:flex;gap:8px;}
+.slider-dot{width:8px;height:8px;border-radius:50%;background:var(--border-warm);transition:all 0.3s;cursor:none;}
+.slider-dot.active{background:var(--sienna);width:24px;border-radius:4px;}
+.consent-note{font-size:11px;letter-spacing:0.5px;color:var(--text-light);text-align:center;margin-top:32px;font-style:italic;}
+@media(max-width:960px){.ba-container{height:280px;}.ba-divider{width:32px;}.ba-divider-icon{width:28px;height:28px;}.ba-divider-icon svg{width:12px;height:12px;}}
+</style>
+
+<script>
+(function(){
+  let current = 0;
+  const total = 4;
+  const track = document.getElementById('sliderTrack');
+  const dotsContainer = document.getElementById('sliderDots');
+
+  // Create dots
+  for(let i = 0; i < total; i++){
+    const dot = document.createElement('div');
+    dot.className = 'slider-dot' + (i === 0 ? ' active' : '');
+    dot.addEventListener('click', () => goToSlide(i));
+    dotsContainer.appendChild(dot);
+  }
+
+  function goToSlide(n){
+    current = (n + total) % total;
+    track.style.transform = `translateX(-${current * 100}%)`;
+    document.querySelectorAll('.slider-dot').forEach((d,i) => d.classList.toggle('active', i === current));
+  }
+
+  window.moveSlide = function(dir){ goToSlide(current + dir); };
+
+  // Touch/swipe support
+  let startX = 0;
+  track.addEventListener('touchstart', e => { startX = e.touches[0].clientX; }, {passive:true});
+  track.addEventListener('touchend', e => {
+    const diff = startX - e.changedTouches[0].clientX;
+    if(Math.abs(diff) > 50) goToSlide(current + (diff > 0 ? 1 : -1));
+  }, {passive:true});
+})();
+</script>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials" id="testimonials">
+  <div class="section-eyebrow reveal">Testimonials</div>
+  <h2 class="section-heading reveal delay-1">Patient<br/><em>Voices</em></h2>
+  <div class="warm-divider reveal delay-2"></div>
+  <div class="testimonial-grid">
+    <div class="testimonial-card ripple-container reveal delay-1">
+      <div class="t-quote">"</div>
+      <div class="t-text">Patient testimonial coming soon. All testimonials will be verified and provided with full permission.</div>
+      <div class="t-name">Patient Name · Mumbai</div>
+      <div class="t-soon">Testimonial Pending</div>
+    </div>
+    <div class="testimonial-card ripple-container reveal delay-2">
+      <div class="t-quote">"</div>
+      <div class="t-text">Patient testimonial coming soon. All testimonials will be verified and provided with full permission.</div>
+      <div class="t-name">Patient Name · Mumbai</div>
+      <div class="t-soon">Testimonial Pending</div>
+    </div>
+    <div class="testimonial-card ripple-container reveal delay-3">
+      <div class="t-quote">"</div>
+      <div class="t-text">Patient testimonial coming soon. All testimonials will be verified and provided with full permission.</div>
+      <div class="t-name">Patient Name · Mumbai</div>
+      <div class="t-soon">Testimonial Pending</div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="section-eyebrow reveal">Contact</div>
+  <h2 class="section-heading reveal delay-1">Book a<br/><em>Consultation</em></h2>
+  <div class="warm-divider reveal delay-2"></div>
+  <div class="contact-grid">
+    <div class="contact-left reveal-left">
+      <p>Whether you are a patient in Mumbai seeking specialist consultation, a Gulf clinic looking for an experienced Prosthodontist, or an implant company seeking a clinical educator — I welcome your enquiry.</p>
+      <div class="contact-details">
+        <div class="contact-item ripple-container">
+          <div class="c-icon"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+          <div><div class="c-label">Location</div><div class="c-val">Mumbai, India</div></div>
+        </div>
+        <div class="contact-item ripple-container">
+          <div class="c-icon"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8 19.79 19.79 0 01.22 1.18 2 2 0 012.2 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.08 6.08l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg></div>
+          <div><div class="c-label">Phone</div><div class="c-val"><a href="tel:+918095371362" style="color:var(--text);text-decoration:none;">+91 80953 71362</a></div></div>
+        </div>
+        <div class="contact-item ripple-container">
+          <div class="c-icon"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+          <div><div class="c-label">Email</div><div class="c-val"><a href="/cdn-cgi/l/email-protection#dcb8aebdafbdb8b1f2b5b1acb0bdb2a8afedef9cbbb1bdb5b0f2bfb3b1" style="color:var(--text);text-decoration:none;"><span class="__cf_email__" data-cfemail="82e6f0e3f1e3e6efacebeff2eee3ecf6f1b3b1c2e5efe3ebeeace1edef">[email&#160;protected]</span></a></div></div>
+        </div>
+        <div class="contact-item ripple-container">
+          <div class="c-icon"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg></div>
+          <div><div class="c-label">LinkedIn</div><div class="c-val"><a href="https://www.linkedin.com/in/dr-asad-mehmood-a6a713b7/" target="_blank" rel="noopener noreferrer" style="color:var(--sienna);text-decoration:none;">Dr. Asad Mehmood</a></div></div>
+        </div>
+        <div class="contact-item ripple-container">
+          <div class="c-icon"><svg viewBox="0 0 24 24" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></div>
+          <div><div class="c-label">Instagram</div><div class="c-val"><a href="https://www.instagram.com/drasad_m.prostho/" target="_blank" rel="noopener noreferrer" style="color:var(--sienna);text-decoration:none;">@drasad_m.prostho</a></div></div>
+        </div>
+        <div class="contact-item ripple-container">
+          <div class="c-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </div>
+          <div><div class="c-label">Instagram</div><div class="c-val">[Add your Instagram URL]</div></div>
+        </div>
+      </div>
+    </div>
+    <form class="contact-form reveal-right" onsubmit="return false;">
+      <div class="f-group">
+        <label class="f-label">Full Name</label>
+        <input type="text" class="f-input" placeholder="Your full name"/>
+      </div>
+      <div class="f-group">
+        <label class="f-label">Email Address</label>
+        <input type="email" class="f-input" placeholder="your@email.com"/>
+      </div>
+      <div class="f-group">
+        <label class="f-label">Phone Number</label>
+        <input type="tel" class="f-input" placeholder="+91 or +966..."/>
+      </div>
+      <div class="f-group">
+        <label class="f-label">Subject</label>
+        <input type="text" class="f-input" placeholder="Consultation enquiry / Gulf opportunity / Other"/>
+      </div>
+      <div class="f-group">
+        <label class="f-label">Message</label>
+        <textarea class="f-input f-textarea" placeholder="Tell me how I can help you..."></textarea>
+      </div>
+      <button type="submit" class="f-submit">Send Enquiry</button>
+    </form>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">Dr. <em>Asad</em> Mehmood</div>
+  <div class="footer-copy">© 2025 Dr. Asad Mehmood · Crafting Smiles. Creating Confidence.</div>
+  <nav class="footer-nav">
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#mumbai">Mumbai</a>
+    <a href="#gulf">Gulf</a>
+    <a href="https://www.linkedin.com/in/dr-asad-mehmood-a6a713b7/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+    <a href="https://www.instagram.com/drasad_m.prostho/" target="_blank" rel="noopener noreferrer">Instagram</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</footer>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+// CUSTOM CURSOR
+const cursor = document.getElementById('cursor');
+const ring = document.getElementById('cursorRing');
+document.addEventListener('mousemove', e => {
+  cursor.style.left = e.clientX + 'px';
+  cursor.style.top = e.clientY + 'px';
+  ring.style.left = e.clientX + 'px';
+  ring.style.top = e.clientY + 'px';
+});
+document.querySelectorAll('a,button,.pillar,.service-card,.mumbai-card,.gulf-stat,.clinical-card,.testimonial-card,.contact-item,.edu-card,.exp-item').forEach(el => {
+  el.addEventListener('mouseenter', () => { cursor.classList.add('active'); ring.classList.add('active'); });
+  el.addEventListener('mouseleave', () => { cursor.classList.remove('active'); ring.classList.remove('active'); });
+});
+
+// RIPPLE EFFECT
+document.querySelectorAll('.ripple-container').forEach(el => {
+  const trigger = (e) => {
+    const rect = el.getBoundingClientRect();
+    const x = (e.clientX || e.touches?.[0]?.clientX || rect.left + rect.width/2) - rect.left;
+    const y = (e.clientY || e.touches?.[0]?.clientY || rect.top + rect.height/2) - rect.top;
+    const ripple = document.createElement('span');
+    ripple.className = 'ripple';
+    const size = Math.max(rect.width, rect.height) * 2;
+    ripple.style.cssText = `width:${size}px;height:${size}px;left:${x - size/2}px;top:${y - size/2}px;`;
+    el.appendChild(ripple);
+    ripple.addEventListener('animationend', () => ripple.remove());
+  };
+  el.addEventListener('click', trigger);
+  el.addEventListener('touchstart', trigger, { passive: true });
+});
+
+// NAVBAR SCROLL
+const navbar = document.getElementById('navbar');
+window.addEventListener('scroll', () => {
+  navbar.classList.toggle('scrolled', window.scrollY > 60);
+});
+
+// SCROLL REVEAL
+const revealEls = document.querySelectorAll('.reveal,.reveal-left,.reveal-right');
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.08 });
+revealEls.forEach(el => revealObserver.observe(el));
+
+// MOBILE MENU
+document.getElementById('hamburger').addEventListener('click', () => {
+  document.getElementById('mobileMenu').classList.add('open');
+});
+document.getElementById('menuClose').addEventListener('click', closeMobile);
+function closeMobile() { document.getElementById('mobileMenu').classList.remove('open'); }
+
+// ACTIVE NAV
+const sections = document.querySelectorAll('section[id]');
+const navLinks = document.querySelectorAll('.nav-links a');
+window.addEventListener('scr
