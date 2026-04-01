@@ -2,317 +2,224 @@
 
 > Personal portfolio website for Dr. Asad Mehmood, Specialist Prosthodontist & Implantologist, consulting in Mumbai.
 
+**Live Website:** [dr-asad-new-website.vercel.app](https://dr-asad-new-website.vercel.app)
+
 ---
 
 ## About This Website
 
-This is a single-page portfolio website built with pure HTML, CSS, and JavaScript. No frameworks or dependencies required. Simply upload the `index.html` file and it works.
-
-**Live Website:** [dr-asad-nine.vercel.app](https://dr-asad-nine.vercel.app)
+Single-page portfolio website built with pure HTML, CSS and JavaScript. All images are embedded directly in the file — no external image folder required. Simply upload `index.html` and it works immediately.
 
 ---
 
-## Pages & Sections
+## Sections
 
 | Section | Description |
 |---------|-------------|
-| Hero | Name, tagline, credentials, profile photo placeholder, stats |
-| About | Bio, clinical philosophy, four pillars |
-| Specialist Services | 6 services with photo placeholders |
+| Hero | Name, tagline, credentials, profile photo, stats |
+| Marquee | Scrolling strip of specialties |
+| About | Bio, clinical philosophy quote, four pillars |
+| Specialist Services | 6 services with photos |
 | Mumbai Consulting | Primary consultation focus |
 | Experience | Professional journey timeline |
-| Education | MDS · RGUHS, International License · Saudi Arabia, BDS · MUHS |
-| Gulf Experience | Saudi license and Gulf credentials |
-| Lifechanging Outcomes | Before & After slider with 4 cases |
-| Testimonials | Patient voices section |
-| Contact | Enquiry form with location details |
+| Education | MDS RGUHS, Saudi License, BDS MUHS |
+| Gulf Experience | Saudi license and credentials |
+| Lifechanging Outcomes | Before & After slider with 3 cases |
+| Patient Reviews | 3 real reviews + Google Review button |
+| Contact | Form with phone, email, LinkedIn, Instagram |
 
 ---
 
-## How to Edit Content
+## Contact Details Currently in Website
 
-All content is inside the single `index.html` file. Open it in any text editor or edit directly on GitHub.
-
-### Change Your Name or Title
-Search for `Dr. Asad Mehmood` and update as needed.
-
-### Change Contact Details
-Search for these placeholders and replace with your real information:
-```
-+91 80953 71362
-drasadm.implants13@gmail.com
-[Add your LinkedIn URL]
-| Instagram | https://www.instagram.com/drasad_m.prostho/ |
-```
-
-### Change the Tagline
-Search for `Crafting Smiles. Creating Confidence.` and replace with your preferred tagline.
+| Field | Details |
+|-------|---------|
+| Phone | +91 80953 71362 |
+| Email | drasadm.implants13@gmail.com |
+| LinkedIn | linkedin.com/in/dr-asad-mehmood-a6a713b7 |
+| Instagram | @drasad_m.prostho |
+| WhatsApp | +91 80953 71362 |
+| Google Reviews | share.google/snlQBsWAkOvD4UFmS |
 
 ---
 
-## How to Add Photos
+## How to Update Content
 
-### Step 1: Upload Photos to GitHub
-1. In this repository click **Add file** then **Upload files**
-2. Create a folder called `images`
-3. Upload your photos with simple names: `profile.jpg`, `smile-makeover.jpg` etc.
-4. Click **Commit changes**
+All content is inside the single `index.html` file. Edit it directly on GitHub using the pencil icon.
 
-### Step 2: Replace Profile Photo (Hero Section)
-Find this code:
-```html
-<div class="photo-placeholder">
-```
-Replace the entire placeholder div with:
-```html
-<img src="/images/profile.jpg" style="width:100%;height:100%;object-fit:cover;object-position:top;">
-```
+### Update the Tagline
+Search for `Crafting Smiles. Creating Confidence.` and replace.
 
-### Step 3: Replace Profile Photo (About Section)
-Find this code:
-```html
-<div class="about-photo-empty">
-```
-Replace the entire div with:
-```html
-<img src="/images/profile.jpg" style="width:100%;height:100%;object-fit:cover;object-position:top;">
-```
+### Update Contact Details
+Search for the current value and replace:
+- Phone: `80953 71362`
+- Email: `drasadm.implants13@gmail.com`
+- WhatsApp number: `wa.me/918095371362`
 
-### Step 4: Replace Service Photos
-Find this code for each service card:
-```html
-<div class="svc-photo-placeholder">
-```
-Replace the entire placeholder div with:
-```html
-<img src="/images/smile-makeover.jpg" style="width:100%;height:180px;object-fit:cover;margin-bottom:20px;">
-```
+### Update Google Review Link
+Search for `share.google/snlQBsWAkOvD4UFmS` and replace with your updated link.
 
-Repeat for all 6 service cards with the relevant photo for each service.
-
-### Step 5: Replace Before & After Photos
-Find this code inside each slide:
-```html
-<div class="ba-photo-placeholder">
-```
-Replace with:
-```html
-<img src="/images/case1-before.jpg" style="width:100%;height:100%;object-fit:cover;">
-```
-
-### Recommended Photo Names
-
-| Photo | Suggested Filename |
-|-------|--------------------|
-| Profile headshot | `profile.jpg` |
-| Smile makeover | `smile-makeover.jpg` |
-| Full mouth rehab | `full-mouth-rehab.jpg` |
-| Dental implants | `dental-implants.jpg` |
-| Cast partial denture | `partial-denture.jpg` |
-| TMD treatment | `tmd.jpg` |
-| Digital smile design | `digital-smile.jpg` |
-| Case 1 before | `case1-before.jpg` |
-| Case 1 after | `case1-after.jpg` |
-| Case 2 before | `case2-before.jpg` |
-| Case 2 after | `case2-after.jpg` |
+### Add or Update Testimonials
+Search for `testimonial-card` and update the review text and patient name inside each card.
 
 ---
 
-## How to Add Testimonials
+## How to Add or Replace Photos
 
-Find this section in `index.html`:
-```html
-<div class="t-text">Patient testimonial coming soon...</div>
-<div class="t-name">Patient Name · Mumbai</div>
-```
-Replace with the real testimonial text and patient name or initials.
+Since all images are embedded as base64 in the HTML, the easiest way to replace a photo is to ask Claude to embed the new photo directly by uploading it in the chat.
+
+If you want to do it manually:
+
+### Step 1: Convert your photo to base64
+1. Go to **base64.guru/converter/encode/image**
+2. Upload your photo
+3. Copy the base64 string
+
+### Step 2: Find the image in index.html
+Search for the alt text of the image you want to replace:
+
+| Photo | Search for |
+|-------|-----------|
+| Hero profile photo | `alt="Dr. Asad Mehmood" style="border` |
+| About profile photo | `alt="Dr. Asad Mehmood"/>` |
+| Smile Makeovers | `alt="Esthetic Smile Makeovers"` |
+| Full Mouth Rehab | `alt="Full Mouth Rehabilitation"` |
+| Dental Implants | `alt="Dental Implants"` |
+| Partial Denture | `alt="Cast Partial Dentures"` |
+| TMD | `alt="Temporomandibular Disorders"` |
+| Digital Smile | `alt="Digital Smile Design"` |
+
+### Step 3: Replace the src value
+Find `src="data:image/jpeg;base64,XXXX"` and replace the base64 string with your new one.
 
 ---
 
-## How to Update Case Titles in the Slider
+## How to Add a New Case to the Slider
 
-Find this line for each slide:
+Copy this block and paste inside the `slider-track` div:
+
 ```html
-<div class="slide-caption">Case 1 · Replace with your case title...</div>
+<div class="slide">
+  <div class="ba-container">
+    <div class="ba-panel">
+      <img src="YOUR_BEFORE_BASE64_HERE" alt="Before"/>
+      <div class="ba-label before-label">Before</div>
+    </div>
+    <div class="ba-divider">
+      <div class="ba-divider-line"></div>
+      <div class="ba-divider-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M8 3L3 8l5 5M16 3l5 5-5 5"/>
+        </svg>
+      </div>
+    </div>
+    <div class="ba-panel">
+      <img src="YOUR_AFTER_BASE64_HERE" alt="After"/>
+      <div class="ba-label after-label">After</div>
+    </div>
+  </div>
+  <div class="slide-caption">Transformation</div>
+</div>
 ```
-Replace with your actual case title and brief description.
+
+Then update the `total` variable in the JavaScript from `3` to `4`.
+
+---
+
+## How to Add a New Testimonial
+
+Find the `testimonial-grid` div and add a new card:
+
+```html
+<div class="testimonial-card ripple-container reveal delay-1">
+  <div class="t-quote">"</div>
+  <div class="t-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+  <div class="t-text">Patient review text goes here.</div>
+  <div class="t-name">Patient Name · Mumbai</div>
+</div>
+```
 
 ---
 
 ## How to Deploy on Vercel
 
-1. Go to [vercel.com](https://vercel.com)
-2. Sign up with your GitHub account
-3. Click **Add New Project**
-4. Select this repository
-5. Click **Deploy**
-6. Your website is live within 2 minutes
+1. Go to [vercel.com](https://vercel.com) and sign in with GitHub
+2. Click **Add New Project**
+3. Select your repository
+4. Set **Framework Preset** to **Other**
+5. Leave Build Command and Output Directory blank
+6. Click **Deploy**
 
-Every time you make a change to `index.html` or upload new photos on GitHub, Vercel automatically updates your live website within 1 to 2 minutes.
+Every time you commit a change to GitHub, Vercel automatically redeploys within 1 to 2 minutes.
+
+---
+
+## How to Force Redeploy on Vercel
+
+1. Go to vercel.com and open your project
+2. Click **Deployments**
+3. Click the three dots **...** next to the latest deployment
+4. Click **Redeploy**
+5. Wait 2 minutes and open your live URL
+
+---
+
+## WhatsApp Button
+
+The floating WhatsApp button is live at the bottom right corner. To change the number search for `wa.me/918095371362` and replace with your new number (country code + number, no spaces or symbols).
+
+---
+
+## Color Palette
+
+| Color | Hex | Used For |
+|-------|-----|----------|
+| Deep Brown | `#2c1a0e` | Hero background, dark sections |
+| Brown | `#4a2c1a` | Dark text, hover states |
+| Sienna | `#b5651d` | Primary accent, buttons |
+| Amber | `#d4843a` | Secondary accent, gold elements |
+| Ivory | `#fdf6ed` | Page background |
+| Warm Cream | `#fffaf3` | Card backgrounds |
 
 ---
 
 ## File Structure
 
 ```
-dr-asad-portfolio/
+Dr-Asad-Portfolio-website/
 │
-├── index.html          ← Main website file (all code in one file)
-├── README.md           ← This guide
-│
-└── images/             ← Create this folder and add your photos here
-    ├── profile.jpg
-    ├── smile-makeover.jpg
-    ├── dental-implants.jpg
-    ├── full-mouth-rehab.jpg
-    ├── partial-denture.jpg
-    ├── tmd.jpg
-    ├── digital-smile.jpg
-    ├── case1-before.jpg
-    ├── case1-after.jpg
-    └── ...
+├── index.html      ← Complete website, all images embedded
+└── README.md       ← This guide
 ```
 
----
-
-## Color Palette
-
-| Color | Hex Code | Used For |
-|-------|----------|----------|
-| Deep Brown | `#2c1a0e` | Headings, hero background |
-| Brown | `#4a2c1a` | Dark backgrounds |
-| Sienna | `#b5651d` | Accents, buttons, highlights |
-| Amber | `#d4a843` | Secondary accents |
-| Ivory | `#fdf6ed` | Page background |
-| Warm Cream | `#fffaf3` | Card backgrounds |
+No images folder needed. Everything is self-contained in `index.html`.
 
 ---
 
-## Placeholder Checklist
+## Checklist
 
-Before going live, complete the following:
-
-- [ ] Add profile photograph (hero section)
-- [ ] Add profile photograph (about section)
-- [ ] Add your phone number
-- [ ] Add your email address
-- [ ] Add your LinkedIn profile URL
-- [x] Instagram profile linked (drasad_m.prostho)
-- [ ] Add service photos for all 6 services
-- [ ] Add before & after case photos (with patient consent)
-- [ ] Add real patient testimonials (with patient permission)
-- [ ] Update case slide captions with real case titles
+- [x] Profile photograph embedded
+- [x] Phone — +91 80953 71362
+- [x] Email — drasadm.implants13@gmail.com
+- [x] LinkedIn linked
+- [x] Instagram — @drasad_m.prostho
+- [x] WhatsApp button active
+- [x] Google Review button linked
+- [x] 3 real patient testimonials — Farhana Wali, Shrishti, Pratik
+- [x] Before & after case photos — 3 cases
+- [x] All 6 service photos embedded
+- [ ] Additional case photos (add when available with patient consent)
+- [ ] Additional testimonials (add as they come in)
 
 ---
 
 ## Important Notes
 
-- All patient photographs must be shared with **explicit patient consent**
-- All testimonials must be provided with **patient permission**
-- Do not add any credentials, qualifications, or clinical claims not verified by Dr. Mehmood
-- The website is fully mobile responsive and works on all screen sizes
+- All patient photographs are shared with explicit patient consent
+- All testimonials are real and provided with patient permission
+- Do not add credentials or clinical claims not verified by Dr. Mehmood
+- The website is fully mobile responsive
 
 ---
 
-*Portfolio website for Dr. Asad Mehmood | Specialist Prosthodontist & Implantologist | Mumbai*
-
----
-
-## How to Add a WhatsApp Direct Contact Button
-
-A floating WhatsApp button allows patients to contact you instantly from any page. Here is exactly how to add it.
-
-### Step 1: Add this code to your index.html
-
-Open `index.html` on GitHub, click the pencil icon to edit, and paste the following code **just before** the closing `</body>` tag at the very bottom of the file:
-
-```html
-<!-- WHATSAPP FLOATING BUTTON -->
-<a href="https://wa.me/918095371362?text=Hello%20Dr.%20Asad%2C%20I%20would%20like%20to%20book%20a%20consultation."
-   class="whatsapp-float"
-   target="_blank"
-   rel="noopener noreferrer"
-   aria-label="Chat on WhatsApp">
-  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-  </svg>
-</a>
-
-<style>
-.whatsapp-float{
-  position:fixed;
-  bottom:28px;
-  right:28px;
-  width:58px;
-  height:58px;
-  background:#25d366;
-  border-radius:50%;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  z-index:500;
-  box-shadow:0 4px 20px rgba(37,211,102,0.4);
-  transition:all 0.3s;
-  text-decoration:none;
-}
-.whatsapp-float:hover{
-  background:#20ba5a;
-  transform:translateY(-4px) scale(1.08);
-  box-shadow:0 8px 28px rgba(37,211,102,0.5);
-}
-.whatsapp-float svg{
-  width:30px;
-  height:30px;
-  fill:#ffffff;
-}
-.whatsapp-float::before{
-  content:'Chat with us';
-  position:absolute;
-  right:68px;
-  background:#2c1a0e;
-  color:#ffffff;
-  font-family:'Nunito',sans-serif;
-  font-size:11px;
-  font-weight:600;
-  letter-spacing:1px;
-  padding:8px 14px;
-  white-space:nowrap;
-  opacity:0;
-  transition:opacity 0.3s;
-  pointer-events:none;
-}
-.whatsapp-float:hover::before{
-  opacity:1;
-}
-</style>
-```
-
-### Step 2: Replace the phone number
-
-Find this part in the code above:
-```
-https://wa.me/918095371362
-```
-Replace `918095371362` with your actual number. No spaces, no + sign, no dashes. Just country code followed by your number.
-
-| Country | Format | Example |
-|---------|--------|---------|
-| India | `91` + number | `918095371362` |
-| Saudi Arabia | `966` + number | `966501234567` |
-| UAE | `971` + number | `971501234567` |
-
-### Step 3: Customise the pre-filled message (optional)
-
-In the link find this part:
-```
-?text=Hello%20Dr.%20Asad%2C%20I%20would%20like%20to%20book%20a%20consultation.
-```
-This message auto-fills when a patient taps the button. Change it to anything. Replace spaces with `%20` and commas with `%2C`.
-
-### What the Button Does
-- Floats fixed in the bottom right corner on every section
-- Shows a tooltip `Chat with us` on hover
-- Opens WhatsApp directly on mobile
-- Opens WhatsApp Web on desktop
-- Pre-fills a consultation message so patients do not need to type anything
-
+*Dr. Asad Mehmood | Specialist Prosthodontist & Implantologist | Mumbai*
